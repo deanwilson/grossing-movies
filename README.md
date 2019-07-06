@@ -8,8 +8,12 @@ Create the virtual environment our python will run in
 
     python3 -m venv venv
 
-And then activate it
+Activate it
 
     source venv/bin/activate
+
+Install the dependencies
+
+    pip3 install -r requirements.txt
 
 
