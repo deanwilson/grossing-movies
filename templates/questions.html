@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- TODO - add integrity= -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+
+    <title>{{ appname }}!</title>
+  </head>
+  <body>
+
+    <div class="game-explanation px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">Click the highest earner</h1>
+    </div>
+
+
+    <div class="container">
+      <div class="card-deck mb-3 text-center">
+
+        <div class="card film-1-card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="film-1-title font-weight-normal"></h4>
+          </div>
+          <div class="card-body">
+            <h1 class="film-1-body pricing-card-title"></h1>
+            <p class="film-1-release"></p>
+          </div>
+        </div>
+
+        <div class="card film-2-card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="film-2-title font-weight-normal"></h4>
+          </div>
+          <div class="card-body">
+            <h1 class="film-2-body pricing-card-title"></h1>
+            <p class="film-2-release"></p>
+          </div>
+        </div>
+
+        <div class="card film-3-card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="film-3-title font-weight-normal"></h4>
+          </div>
+          <div class="card-body">
+            <h1 class="film-3-body pricing-card-title"></h1>
+            <p class="film-3-release"></p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="game-explanation px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">The rules</h1>
+      <p class="lead">Click on which of the three films you think made the most
+      money (in US Dollars) internationally. The amounts are <em>not</em>
+      adjusted for inflation.</p>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- TODO - add integrity= -->
+    <script src="{{ url_for('static', filename='code.js')}}"></script>
+  </body>
+</html>

@@ -1,11 +1,7 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 import sqlite3
 
 app = Flask(__name__)
-
-@app.route("/")
-def hello():
-    return "Hello World!"
 
 # TODO
 # make this a param or fuzz to a given decade
@@ -27,3 +23,7 @@ def films(year):
     #films = [r for r in results {'year': results[1], 'title': results[2], 'amount': results[3]}]
 
     return jsonify({'films': results})
+
+@app.route('/')
+def questions():
+    return render_template('questions.html', appname='Movie Gross Guesser 27')
