@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+  var highest_amount = 100;
+  var highest_title = '';
+
   $.ajax({
     method: "GET",
     url: "/films/2017",
@@ -20,14 +23,25 @@ $(document).ready(function() {
 
         var film = results[Math.floor(Math.random() * results.length)];
 
-        var film_title = film[1]
-        var film_year = film[0]
-        var film_amount = film[2]
+        var film_title  = film[1]
+        var film_year   = film[0]
+        var film_earnings = film[2];
+        var sanitised_earnings = parseInt(film_earnings.replace(/,/g, ""));
 
         $( "h4.film-" + step + "-title" ).text(film_title);
         $( "h1.film-" + step + "-body" ).text(film_title);
+        $( "h1.film-" + step + "-body" ).text(film_earnings);
         $( "p.film-" + step + "-release" ).text(film_year);
+
+        if (sanitised_earnings > highest_amount) {
+          // alert("In if: " + film_title + " " + film_earnings + " Current " + highest_title + " " + highest_amount);
+          highest_title = film_title;
+          highest_amount = sanitised_earnings;
+        }
       }
 
+      alert("Hightest earning is " + highest_title);
+
     });
+
 });
