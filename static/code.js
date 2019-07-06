@@ -44,17 +44,16 @@ $(document).ready(function() {
 
     });
 
-  $(".film-1-card").click("Hello", function (msg) {
-    alert("I was clicked" + JSON.stringify(msg));
+  for(let card of [1, 2, 3]) {
+    $(".film-" + card + "-card").click("Hello", function (msg) {
+      clicked_title = $("h4.film-" + card + "-title").text();
 
-    clicked_title = $("h4.film-1-title").text();
-
-    alert("Clicked " + clicked_title + " highest " + highest_title);
-    if (clicked_title === highest_title) {
-      $(".film-1-card").css('background-color', 'green');
-    } else {
-      $(".film-1-card").css('background-color', 'red');
-    }
-  });
+      if (clicked_title === highest_title) {
+        $(".film-" + card + "-card").css('background-color', 'green');
+      } else {
+        $(".film-" + card + "-card").css('background-color', 'red');
+      }
+    });
+  }
 
 });
