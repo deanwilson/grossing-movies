@@ -40,8 +40,21 @@ $(document).ready(function() {
         }
       }
 
-      alert("Hightest earning is " + highest_title);
+      // alert("Hightest earning is " + highest_title);
 
     });
+
+  $(".film-1-card").click("Hello", function (msg) {
+    alert("I was clicked" + JSON.stringify(msg));
+
+    clicked_title = $("h4.film-1-title").text();
+
+    alert("Clicked " + clicked_title + " highest " + highest_title);
+    if (clicked_title === highest_title) {
+      $(".film-1-card").css('background-color', 'green');
+    } else {
+      $(".film-1-card").css('background-color', 'red');
+    }
+  });
 
 });
