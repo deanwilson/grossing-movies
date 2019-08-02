@@ -1,4 +1,4 @@
 __pycache__/
 venv/
-database/*
+database/*.db
 static/images/*.jpg

@@ -1,0 +1,2 @@
+This directory will hold the sqlite database built from the data in
+`data/film_incomes` when the `bin/data2sqlite.py` script is executed.
