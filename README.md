@@ -31,12 +31,4 @@ You can then test the response with curl
 
     curl http://127.0.0.1:5000/films/2017
 
-## Client
-
-### 
-
-    cd html
-
-    python3 -m http.server 8000
-
-Open the [page locally](http://127.0.0.1:8000)
+Open the [page locally](http://127.0.0.1:5000)
