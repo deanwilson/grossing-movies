@@ -16,6 +16,3 @@
 
  * Zhan Lang 2 becomes Wolf Warrior 2 - language
  * X_Men becomes X-Men: Apocalypse - bad `search` parsing
-
-## Add a refresh link to get another question
-
