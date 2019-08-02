@@ -53,6 +53,12 @@ $(document).ready(function() {
       } else {
         $(".film-" + card + "-card").css('background-color', 'red');
       }
+
+      // and unset the click handlers so you can only click one
+      // in a very duplicated way
+      $( ".film-1-card").unbind( "click" );
+      $( ".film-2-card").unbind( "click" );
+      $( ".film-3-card").unbind( "click" );
     });
   }
 
