@@ -24,11 +24,14 @@ $(document).ready(function() {
         var film_year   = film[0]
         var film_earnings = film[2];
         var sanitised_earnings = parseInt(film_earnings.replace(/,/g, ""));
+        var sanitised_title = film_title.replace(/[^a-z0-9+]+/gi, "_");
 
         $( "h4.film-" + step + "-title" ).text(film_title);
         $( "h1.film-" + step + "-body" ).text(film_title);
         $( "h1.film-" + step + "-body" ).text(film_earnings);
         $( "p.film-" + step + "-release" ).text(film_year);
+
+        $("img.film-" + step + "-poster").attr("src", "/static/images/" + sanitised_title + ".jpg");
 
         if (sanitised_earnings > highest_amount) {
           // alert("In if: " + film_title + " " + film_earnings + " Current " + highest_title + " " + highest_amount);
