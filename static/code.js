@@ -13,8 +13,7 @@ $(document).ready(function() {
 
 //     var results = JSON.stringify(msg.films);
 //     alert( "-- Films --: " + Object.keys(results));
-
-//      alert("Single file: " + film_title + " released in " + film_year + " made " + film_amount)
+//     alert("Single file: " + film_title + " released in " + film_year + " made " + film_amount)
 
       for(let step = 1; step < 4; step++) {
 
@@ -27,20 +26,19 @@ $(document).ready(function() {
         var sanitised_title = film_title.replace(/[^a-z0-9+]+/gi, "_");
 
         $( "h4.film-" + step + "-title" ).text(film_title);
-        $( "h1.film-" + step + "-body" ).text(film_title);
-        $( "h1.film-" + step + "-body" ).text(film_earnings);
+
+        // Uncomment this to show the amounts when playing.
+        // Makes debugging a lot easier
+        // $( "h4.film-" + step + "-body" ).text(film_earnings);
         $( "p.film-" + step + "-release" ).text(film_year);
 
         $("img.film-" + step + "-poster").attr("src", "/static/images/" + sanitised_title + ".jpg");
 
         if (sanitised_earnings > highest_amount) {
-          // alert("In if: " + film_title + " " + film_earnings + " Current " + highest_title + " " + highest_amount);
           highest_title = film_title;
           highest_amount = sanitised_earnings;
         }
       }
-
-      // alert("Hightest earning is " + highest_title);
 
     });
 
