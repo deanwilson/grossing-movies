@@ -2,11 +2,15 @@
 
 ## Select films from more than just 2017
 
+## Ensure none of the random film selections are duplicates
+
 ## Keep session state and do a ten question round
 
 ## Example of putting this behind nginx
 
 ## Show film posters instead of the amount
+
+ * posters are showing, amount is present for debugging
 
 ## Handle posters where the film name isn't the same
 
