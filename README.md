@@ -18,9 +18,10 @@ Install the dependencies
 
 ### Data sources
 
-Load the movie data
+Load the movie data. This script will create a sqlite database, `database/file_incomes.db`,
+from the data in `data/film_incomes`.
 
-   // TODO
+    bin/data2sqlite.py
 
 Fetch the movie posters
 
