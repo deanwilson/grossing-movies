@@ -2,6 +2,8 @@
 
 ## Select films from more than just 2017
 
+## Ensure none of the random film selections are duplicates
+
 ## Keep session state and do a ten question round
 
 ## Example of putting this behind nginx

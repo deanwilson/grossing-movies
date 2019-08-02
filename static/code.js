@@ -16,9 +16,6 @@ $(document).ready(function() {
 
 //      alert("Single file: " + film_title + " released in " + film_year + " made " + film_amount)
 
-      // TODO
-      // Ensure none of the random selections are duplicates
-
       for(let step = 1; step < 4; step++) {
 
         var film = results[Math.floor(Math.random() * results.length)];
