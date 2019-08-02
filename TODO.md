@@ -8,11 +8,11 @@
 
 ## Example of putting this behind nginx
 
-## Show film posters instead of the amount
-
- * posters are showing, amount is present for debugging
-
 ## Handle posters where the film name isn't the same
 
  * Zhan Lang 2 becomes Wolf Warrior 2 - language
  * X_Men becomes X-Men: Apocalypse - bad `search` parsing
+
+## Build a docker image
+
+ * Allow easier running of the game by bundling it all up
